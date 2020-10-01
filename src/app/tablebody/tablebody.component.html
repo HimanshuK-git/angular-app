@@ -1,0 +1,17 @@
+<table class="table table-striped my-5">
+    <thead>
+        <tr>
+            <th *ngFor = "let i of tablehead">{{ i }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let s of students" [attr.id]="s.id">
+            <td>{{ s.roll }}</td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.city }}</td>
+            <td>{{ s.college }}</td>
+            <td>{{ s.qualification }}</td>
+            <td><button class="btn btn-danger" type="button" (click)="Deletethis(s)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
